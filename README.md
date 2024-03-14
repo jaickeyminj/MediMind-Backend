@@ -1,2 +1,4 @@
 # MediMind-Backend
+
+npm install 
  
