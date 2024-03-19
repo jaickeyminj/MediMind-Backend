@@ -1,0 +1,33 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const appointmentSchema = new Schema({
+    date: {
+        type: Date,
+        required: true
+    },
+    time: {
+        type: String,
+        required: true
+    },
+    fee: {
+        type: Number,
+        required: true
+    },
+    isPaid: {
+        type: Boolean,
+        default: false
+    },
+    isConfirmedByConsultant: {
+        type: Boolean,
+        default: false
+    },
+    comment: {
+        type: String
+    },
+    meetingLink: {
+        type: String
+    }
+});
+
+module.exports = mongoose.model('Appointment', appointmentSchema);
